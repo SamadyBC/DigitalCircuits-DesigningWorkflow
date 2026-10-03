@@ -18,11 +18,11 @@ module rsa_top (
     logic w_core_err;
     logic [3:0] w_core_dout;
 
-    rsa_core U0 #(
+    rsa_core #(
         .DATA_WIDTH(4),
         .RESET(1'b1),
         .LOAD(1'b1)
-    )(
+    ) U0 (
         .core_clk(clk), 
         .core_rst(rst), 
         .core_load(w_io_load),   // Controlado pelo rsa_io
